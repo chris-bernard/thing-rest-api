@@ -1,0 +1,5 @@
+Authenticated JSON API exposing "Things" 
+========================================
+
+Landing project based on Play! 2.0.4, MongoDB/Jackson plugin and REST/JSON.
+It is exposing service to POST, GET, PUT, DELETE
