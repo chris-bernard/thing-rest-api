@@ -12,3 +12,7 @@ dist
 /.classpath
 /.project
 /RUNNING_PID
+/*.db
+.settings
+.target
+conf/evolutions
