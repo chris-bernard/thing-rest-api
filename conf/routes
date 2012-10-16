@@ -1,0 +1,41 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /				controllers.Application.index()
+
+#Creation
+POST 	/thing 			controllers.Things.create()
+
+#Mise a jour
+PUT 	/thing/:id 		controllers.Things.update(id: Long)     
+
+#Rechercher par Id
+GET 	/thing/:id 		controllers.Things.getById(id: Long)
+
+#Supprimer par Id
+DELETE 	/thing/:id		controllers.Things.delete(id: Long)
+
+#Retrouver tous les elements
+GET 	/things			controllers.Things.getAll()
+
+#Retrouver certains elements
+GET 	/things/:fieldName/equals/:value	controllers.Things.query(fieldName: String, value: String)
+
+
+#Retrouver tous les elements
+GET 	/users			controllers.Users.getAll()
+
+
+# Authentication
+GET     /login			controllers.Authentication.login()
+POST    /login			controllers.Authentication.authenticate()
+GET     /logout			controllers.Authentication.logout()
+
+POST    /loginjson                          controllers.AuthenticationJson.authenticate()
+GET     /logoutjson                         controllers.AuthenticationJson.logout()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+#GET / controllers.Assets.at(path="/public", file="index.html")
